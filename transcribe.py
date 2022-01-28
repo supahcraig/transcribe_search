@@ -114,7 +114,7 @@ job_name = transcribe(bucket, audio_track_file)
 transcription_URI = fetch_transcription_URI(transcription_job_name=job_name)
 words = fetch_words(s3_URI=transcription_URI)
 wFreq = word_count(transcription_text=words)
-search_word_usage = search_for_words(transcription_dict=wFreq, search_word_filepath='badwords.txt')
+search_word_usage = search_for_words(transcription_dict=wFreq, search_word_filepath='search_words.txt')
 
 # Show the results
 print('=' * 50)
